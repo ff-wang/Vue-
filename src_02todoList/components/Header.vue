@@ -8,9 +8,9 @@
 
 <script type="text/ecmascript-6">
   export default {
-    props:{
-      addTodo:Function
-    },
+    // props:{
+    //   addTodo:Function
+    // },
     data(){
       return {
         title:''
@@ -25,7 +25,8 @@
           title:title,
           completed:false
         }
-        this.addTodo(todo)
+        // this.addTodo(todo)
+        this.$emit('addTodo',todo)
         this.title = ''
       }
     }

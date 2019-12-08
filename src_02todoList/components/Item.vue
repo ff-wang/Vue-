@@ -14,7 +14,7 @@
   export default {
     props:{
       todo:Object,
-      deleteTodo:Function,
+      // deleteTodo:Function,
       index:Number,
       updateTodo:Function
     },
@@ -36,7 +36,8 @@
       },
       deleteItem(){
         if (confirm('确定删除吗？')) {
-          this.deleteTodo(this.index)
+          // this.deleteTodo(this.index)
+          this.$eventBus.$emit('deleteTodo',this.index)
         }
       },
     },
