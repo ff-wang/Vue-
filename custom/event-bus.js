@@ -9,7 +9,7 @@
   let callbackContainer = {}
   // {
   //   "on":[add1,add2],
-  //   "smit:[]"
+  //   "smit:[]
   // }
 
   eventBus.on = function(eventName, callback){

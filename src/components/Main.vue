@@ -30,7 +30,7 @@
         this.firstView = false
         this.isLoading = true
         //发送ajax请求
-        axios('http://localhost:4000/search/users',{params:{q:serachName}})
+        axios('https://api.github.com/search/users',{params:{q:serachName}})
         .then(response=>{
           const result  = response.data
           const users = result.items.map(item=>({

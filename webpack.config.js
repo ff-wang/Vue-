@@ -64,7 +64,14 @@ module.exports = {
     open:true, //自动打开浏览器
     quiet:true, //不做太多日志输出
     proxy:{
-      '/api':'http://localhost:4000'
+      '/api':{
+        target:'http://localhost:4000',
+        pathRewrite:{
+          '^/api':''
+        },
+        changeOrigin:true 
+      }
+
     }
   },
 
