@@ -11,7 +11,8 @@ module.exports = {
   // 出口(打包生成js)
   output: {
     filename: 'static/js/[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath:'/'
   },
   // 模块加载器
   module: {
@@ -71,8 +72,8 @@ module.exports = {
         },
         changeOrigin:true 
       }
-
-    }
+    },
+    historyApiFallback:true //任意的404响应都被替换为index.html
   },
 
   //开启source-map调试
